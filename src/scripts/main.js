@@ -9,10 +9,11 @@ tree.querySelectorAll('ul').forEach((item) => {
   childNodes.forEach((node) => {
     if (node.nodeType === Node.TEXT_NODE && node.textContent.trim() !== '') {
       const span = document.createElement('span');
-      const nextEl = span.nextElementSibling;
 
       span.textContent = node.textContent;
       li.replaceChild(span, node);
+
+      const nextEl = span.nextElementSibling;
 
       nextEl.style.display = 'block';
 

@@ -15,6 +15,10 @@ tree.querySelectorAll('ul').forEach((item) => {
 
       const nextEl = span.nextElementSibling;
 
+      if (!nextEl || nextEl.tagName.toLowerCase() !== 'ul') {
+        return;
+      }
+
       nextEl.style.display = 'block';
 
       span.addEventListener('click', (e) => {
